@@ -58,12 +58,12 @@ def text_based_tic_tac_toe():
     else:
         round_ = player2_name
         round_choice = pl2_choice
-    print("Toss is done!")
+    print("We will now randomly decide who begins!")
     while num_unoccupied:
-        str1 = round_ + "'s tern(enter: #row(1-3) #column(1-3)):"
+        str1 = round_ + "'s turn(enter: #row(1-3) #column(1-3)):"
         input_ = None
         if round_ == "Computer":
-            print("Computer's tern")
+            print("Computer's turn")
             ans = randint(0, 8)
             while occupied[ans] != "-":
                 ans = randint(0, 8)
