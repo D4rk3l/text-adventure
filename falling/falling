@@ -1,0 +1,178 @@
+import time
+from tkinter import *
+
+
+def show(text,timer=0.01):
+    print("\n")
+    for i in range(len(text)):
+        print(text[i], end='', flush=True)
+        time.sleep(timer)
+    time.sleep(0.2)
+    print()
+
+def dot(f,t):
+    time.sleep(1)
+    for t in range(f):
+        time.sleep(t)
+        show("...",timer=0.1)
+
+
+def updatebutton(at,ac,bt,bc,ct,cc):
+    ab.configure(text=at,command=ac)
+    bb.configure(text=bt,command=bc)
+    cb.configure(text=ct,command=cc)
+
+def a1():
+    show("\n...You open your eyes and find yourself falling through the sky...... somehow\n\n")
+    updatebutton("WTF???",a2,"Try to look around",b2,"Go back to sleep",c1)
+
+
+ignorance_counter=0
+def c1():
+    show("\nSrsly???")
+    global ignorance_counter
+    ignorance_counter+=1
+    if ignorance_counter>=6:
+        neverwake()
+    updatebutton("Mmmhmmm",c1a,"Whatever, you can't wake me",c1a,"...... Ugh, fine!",a1)
+
+def c1a():
+    global ignorance_counter
+    ignorance_counter+=3
+    if ignorance_counter>=6:
+        neverwake()
+    show("\nYou are")
+    time.sleep(0.3)
+    show("gonna",0.2)
+    time.sleep(0.3)
+    show("DIE!",0.4)
+
+
+
+def a2():
+    show("\nWell, what are you gonna do?")
+    updatebutton("OMG!",dot(1,1),"Try to look around",b2,"Close eyes and try to go back to sleep",c1)
+
+def b2():
+    show('\nYou keep falling')
+    dot(1,0.5)
+    show("\nYou spot a hole in the ground far below you, and everywhere else is barren land")
+    updatebutton("Try to dive toward the hole",a3,"Ewwww, a hole!",c1a,"Think about how you will clear your browser history", neverwake)
+
+def a3():
+    show("\nYou flail your arms and legs trying to get close to the hole.\nBut your struggle causes you to go off-course.")
+    dot(1,0.5)
+    show("\n You draw closer and closer to the ground")
+    dot(1,0.3)
+    show("You feel something in your pocket, what could it be??")
+    updatebutton("A chocolate bar!!!", neverwake, "An ordinary coin",b4,"A fine silicone sculpture",useless)
+
+def useless():
+    global ignorance_counter
+    show("But it doesn't do anything"+ignorance_counter*"!")
+    ignorance_counter+=1
+    if ignorance_counter>=4:
+        neverwake()
+
+def b4():
+    show("You hold on to the coin...... whatever")
+    dot(2,0.3)
+    show("But you suddenly feel luckier...... this must be a.... LUCKY COIN... hur hurr")
+    dot(1,1)
+    show("You fell through a hole",0.1)
+    time.sleep(1)
+    print("\n\nSPLASH!\n\n")
+    time.sleep(1)
+    print("""
+
+     ________   _      _____    _____    _____ ____  _____  ______
+    |_   __  | / \    |_   _|  |_   _|  |_   _|_   \|_   _.' ___  |
+      | |_ \_|/ _ \     | |      | |      | |   |   \ | |/ .'   \_|
+      |  _|  / ___ \    | |   _  | |   _  | |   | |\ \| || |   ____
+     _| |_ _/ /   \ \_ _| |__/ |_| |__/ |_| |_ _| |_\   |\ `.___]  |
+    |_____|____| |____|________|________|_____|_____|\____`._____.'
+
+
+
+    """)
+
+
+    show("\nYou fell in water and found yourself wet as fish\n\n")
+    updatebutton("Try to look around", a4, "Go back to sleep", neverwake, "listen for sounds",c4)
+
+def a4():
+    show("But it's dark and you can't see a thing")
+
+
+
+def c4():
+    import winsound
+    show("You hear something")
+    dot(2,0.3)
+    show("It sounds like...")
+    time.sleep(1)
+    frequency = 2500  # Set Frequency To 2500 Hertz
+    duration = 1000  # Set Duration To 1000 ms == 1 second
+    for i in range(5):
+        winsound.Beep(frequency, duration)
+    time.sleep(3)
+    show("You woke up ......",0.12)
+    time.sleep(1)
+    dot(3,0.1)
+    print("""
+
+
+          _______ _            ______           _                       ___
+         |__   __| |          |  ____|         | |                     |__  \\
+            | |  | |__   ___  | |__   _ __   __| |                        ) |
+            | |  | '_ \ / _ \ |  __| | '_ \ / _` |                       / /
+            | |  | | | |  __/ | |____| | | | (_| |  _ _ _ _ _ _ _ _ _   |_|
+            |_|  |_| |_|\___| |______|_| |_|\__,_| (_|_|_|_|_|_|_|_|_)  (_)
+
+
+
+
+        """)
+
+    time.sleep(2)
+
+
+
+
+
+
+
+def neverwake():
+    show('\nYou never woke up again',0.15)
+    root.quit()
+    exit()
+
+
+
+dot(3,1.5)
+print("\n'hey'")
+dot(1,1)
+print("\n'HEY!'")
+time.sleep(1)
+print("\n'YOU'")
+time.sleep(.6)
+print("\n'WAKE UP!'")
+
+
+
+root =Tk()
+root.geometry('310x200')
+
+ab =Button(root, text="*Wake up",command=a1, width=40)
+ab.place(x=10,y=25)
+bb =Button(root, text="...", width=40)
+bb.place(x=10,y=65)
+cb =Button(root, text="*Ignore voice", command=c1, width=40)
+cb.place(x=10,y=105)
+quitb=Button(root, text="Give up everything",width=15, fg="red", command=root.destroy).place(x=97,y=175)
+
+
+
+
+
+root.mainloop()
