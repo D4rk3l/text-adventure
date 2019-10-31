@@ -5,8 +5,8 @@ door = raw_input('> ')
 # Of course this will only work if the script down below has a use for the varibles you have inputed,
 #if not the program will say 'Syntax Error'.
 if door == "1":
-    print 'Theres a giant bear eating what appears to be a human arm, though its so damaged it\'s hard to be sure'
-    print 'what do you want to do?'
+    print 'There\'s a giant bear eating what appears to be a human arm, though its so damaged it\'s hard to be sure'
+    print 'What do you want to do?'
     print '#1 try to take the arm'
     print '#2 scream at the bear'
 
@@ -33,7 +33,7 @@ elif door == "2":
         print 'Your body survives, powered by pure insanity!'
 
     else:
-        print 'your mind melts into green flavoured jello! mmm!'
+        print 'Your mind melts into green flavoured jello! mmm!'
 
 else:
-    print 'you think for a while but suddenly a troll weilding a terrible looking knife comes through a trap door and shanks you!'
+    print 'You think for a while but suddenly a troll weilding a terrible looking knife comes through a trap door and shanks you!'
