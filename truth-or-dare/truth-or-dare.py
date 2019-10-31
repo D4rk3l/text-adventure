@@ -21,7 +21,7 @@ from numpy import random
 # Till then play with the below truths and dares
 #from questions import truths, dares
 truths = ["Do you have a crush on your cousin?", "What's the most weirdest thing you've done on your date?"]
-dares = ["Remove your shirt and scream out loudly", "Bark like a dog to a dog"]
+dares = ["Remove your shirt and scream out loudly", "Bark like a dog to a dog", "Talk to a pillow like it’s your crush."]
 
 while True:
     randomindex = random.randint(0,n)
