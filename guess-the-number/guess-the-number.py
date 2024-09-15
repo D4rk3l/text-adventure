@@ -3,50 +3,50 @@ import time
 
 guessesTaken = 0
 
-print('\n\n\n\n\n[--system--] enter code in 15 trys to avoid lockout\n')
-print('\nconnecting....')
-time.sleep(1)
+print('\n\n\n\n\n[--system--] Digite o código em 10 tentativas para evitar que bloqueie\n')
+print('\nconectando....')
+time.sleep(3)
+print('....')
+time.sleep(2)
 print('....')
 time.sleep(1)
 print('....')
 time.sleep(1)
-print('....')
-time.sleep(1)
-print('connection established\n')
+print('coneção estabelecida\n')
 print('---------------------')
-print('  MAINFRAME - LOGIN  ')
+print('  Tela Principal - LOGIN  ')
 print('---------------------')
-print('\nenter 3 digit access code..')
+print('\nColoque um código de acesso de 3 dígitos..')
 
 number = random.randint(000, 999)
-while guessesTaken < 15:
+while guessesTaken < 10:
 	print()
-	guess = input('user:> ')
+	guess = input('usuário:> ')
 	guess = int(guess)
 	
 	guessesTaken = guessesTaken + 1
 	
 	if guess < number:
-		print('\nACCESS - DENIED  -code to low')
+		print('\nAcesso - NEGADO  - código acima do valor')
 		
 	if guess > number:
-		print('\nACCESS - DENIED  -code to high')
+		print('\nAcesso - NEGADO  -código abaixo do valor')
 		
 	if guess == number:
 		break
 		
 if guess == number:
 	guessesTaken = str(guessesTaken)
-	print('\nverifying ....')
-	time.sleep(1)
-	print('\nauthenticating ....')
-	time.sleep(1)
+	print('\nverificando ....')
+	time.sleep(3)
+	print('\nautenticando ....')
+	time.sleep(2)
 	print('....')
 	time.sleep(1)
 	print('....')
 	time.sleep(1)
-	print('\nACCESS - GRANTED')
-	print('\nGAME OVER\n')
+	print('\nACCESSO - GARANTIDO')
+	print('\nFIM DE JOGO\n')
 	exit(0)
 	
 if guess != number:
@@ -55,6 +55,7 @@ if guess != number:
 	time.sleep(1)
 	print('\n....')
 	time.sleep(1)
-	print('\nSYSTEM LOCKED  -the code was ' + number)
+	print('\nSISTEMA BLOQUEADO - O CÓDIGO ERA ' + number)
+	print('\nMais sorte da próxima vez! ')
 	print()
 	exit(0)

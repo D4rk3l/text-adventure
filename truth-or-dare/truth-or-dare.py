@@ -11,7 +11,7 @@ n = int(input("How many people are playing the game?"))
 # Write down names for each user
 names = []
 for i in range(n):
-    names.append(input("Name of {0}'th player: ".format(i)))
+    names.append(input("Type the Name of {0}'th player: ".format(i)))
 
 # Start the game
 from numpy import random
@@ -20,8 +20,8 @@ from numpy import random
 # I'll scrape more truths and dares from some website
 # Till then play with the below truths and dares
 #from questions import truths, dares
-truths = ["Do you have a crush on your cousin?", "What's the most weirdest thing you've done on your date?"]
-dares = ["Remove your shirt and scream out loudly", "Bark like a dog to a dog"]
+truths = ["Do you have a crush on your team work?", "What's the most weirdest thing you've done on your birthday?"]
+dares = ["Run on the Street without your T-shirt", "Stay still for 5 minutes"]
 
 while True:
     randomindex = random.randint(0,n)
