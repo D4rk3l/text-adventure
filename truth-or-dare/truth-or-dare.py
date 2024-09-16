@@ -20,7 +20,7 @@ from numpy import random
 # I'll scrape more truths and dares from some website
 # Till then play with the below truths and dares
 #from questions import truths, dares
-truths = ["Do you have a crush on your cousin?", "What's the most weirdest thing you've done on your date?"]
+truths = ["Do you have a crush on your cousin?", "What's the most weirdest thing you've done on your date?", "Is there anything about your life you would change?", "What's your biggest turn-on?"]
 dares = ["Remove your shirt and scream out loudly", "Bark like a dog to a dog"]
 
 while True:
